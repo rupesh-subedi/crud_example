@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blog</title>
+</head>
+<body>
+	<div>
+		this is the blog 
+		
+		{% for post in postitem %}
+			<p>{{post}}</p>
+			<a href="{% url 'update_task' post.id %}">update</a>
+			<br>
+			<a href="{% url 'delete_task' post.id %}">delete</a>
+	</div>
+
+		{% endfor %}
+		
+		<a href="create/">create a new blog</a>
+		<br>
+
+</body>
+</html>
